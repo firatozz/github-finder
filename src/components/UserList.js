@@ -9,10 +9,12 @@ const UserList = () => {
     return <Loading />;
   }
   return (
-    <div className='row'>
-      {users.map((user, index) => (
-        <User user={user} key={index} />
-      ))}
+    <div className='container'>
+      <div className='row'>
+        {users.map((user, index) => (
+          <User user={user} key={index} />
+        ))}
+      </div>
     </div>
   );
 };

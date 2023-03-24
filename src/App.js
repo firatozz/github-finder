@@ -13,9 +13,7 @@ const App = () => {
         <Navbar />
         <Search />
         <Alert />
-        <div className='container'>
-          <UserList />
-        </div>
+        <UserList />
       </AlertContextProvider>
     </UsersContextProvider>
   );
