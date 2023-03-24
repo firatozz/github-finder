@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AlertContext } from "./../context/alertContext";
 
-export const Alert = (props) => {
+const Alert = () => {
+  const { alert } = useContext(AlertContext);
+
   return (
-    props.alert !== null && (
+    alert !== null && (
       <div className='container'>
-        <div className={`alert alert-` + props.alert.type}>{props.alert.message}</div>
+        <div className={`alert alert-` + alert.type}>{alert.message}</div>
       </div>
     )
   );
